@@ -1,0 +1,11 @@
+.home .title{
+    font-size: 3rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.home .subtitle{
+   font-size: 1.1em;
+   margin-top: 15px;
+   padding-top: 10px;
+}
