@@ -1,0 +1,27 @@
+table{
+    width: 100%;
+}
+
+.card {
+    background-color: whitesmoke;
+}
+
+.hader { 
+    text-align: center;
+    border: 0.8px solid white;
+}
+
+.row{
+    text-align: center;
+}
+
+.editar{
+    margin-top: 10px;
+    margin-right: 10px;
+    color: steelblue;
+}
+
+.deletar{
+    margin-left: 10px;
+    color: salmon;
+}

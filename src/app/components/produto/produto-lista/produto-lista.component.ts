@@ -1,6 +1,9 @@
+import { Router } from '@angular/router';
 import { ProdutoService } from './../produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto.model';
+import { DeletarProdutoDialogComponent } from '../deletar-produto-dialog/deletar-produto-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-produto-lista',
@@ -9,15 +12,33 @@ import { Produto } from '../produto.model';
 })
 export class ProdutoListaComponent implements OnInit {
 
-  produtos: Produto[] | undefined
-  
-  constructor(private produtoService : ProdutoService) {}
+  produtos!: Produto[];
+  displayedColumns = ['id', 'nome', 'preco', 'action']
+
+  constructor(private produtoService: ProdutoService, private dialog: MatDialog, private router : Router) {
+  }
 
   ngOnInit(): void {
     this.produtoService.getProduto().subscribe(produtos => {
       this.produtos = produtos
-      console.log(produtos)
     })
+  }
+
+  deletarProduto(id: string): void {
+
+    const dialogRef = this.dialog.open(DeletarProdutoDialogComponent);
+
+    var confirm;
+
+    dialogRef.afterClosed().subscribe(result => {
+      confirm = result;
+      if (confirm) {
+        this.produtoService.deletarProduto(id).subscribe(() => {
+          this.produtoService.showMessage("Produto deletado com Sucesso!")
+          this.ngOnInit();
+        });
+      }
+    });
   }
 
 }

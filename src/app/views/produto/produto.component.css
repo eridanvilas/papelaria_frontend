@@ -1,4 +1,6 @@
-button{
-    margin-bottom: 35px;
+.novoProduto {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
     background-color: indigo;
 }

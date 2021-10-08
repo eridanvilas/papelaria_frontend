@@ -1,6 +1,7 @@
-export interface Produto{
-    id? : Number
-    nome : string
-    preco?: Number
-    
+export class Produto{
+    public id? : Number
+    public nome!: string
+    public preco?: Number
+
+    constructor(){}
 }

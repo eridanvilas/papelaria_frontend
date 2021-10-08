@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 15px;
+    background-color: indigo;
+}
+
+.cancelar{
+    background-color: tomato;
+}

@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Confirmação de Exclusão</h2>
+<mat-dialog-content class="mat-typography">
+    Deseja confirma a exclusão desse produto?
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="cancelar">Cancelar</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="confirmar">Confirmar</button>
+</mat-dialog-actions>

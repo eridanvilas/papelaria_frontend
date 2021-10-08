@@ -10,26 +10,42 @@ import { Produto } from './produto.model';
 })
 
 export class ProdutoService {
-  
+
   baseUrl = environment.api
 
-  constructor( private snackBar: MatSnackBar,
+  constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition:"top" 
+      verticalPosition: "top"
     })
   }
 
-  criar(produto: Produto): Observable<Produto>{
+  criar(produto: Produto): Observable<Produto> {
     return this.http.post<Produto>(this.baseUrl + "/produtos", produto)
   }
 
-  getProduto(): Observable<Produto[]>{
+  getProduto(): Observable<Produto[]> {
     return this.http.get<Produto[]>(this.baseUrl + "/produtos")
+  }
+
+
+  getProdutoById(id: string): Observable<Produto> {
+    const url = this.baseUrl + "/produtos/" + id;
+    return this.http.get<Produto>(url)
+  }
+
+  updateProduto(produto: Produto): Observable<Produto> {
+    const url = this.baseUrl + "/produtos/" + produto.id;
+    return this.http.put<Produto>(url, produto)
+  }
+
+  deletarProduto(id: string): Observable<Produto> {
+    const url = this.baseUrl + "/produtos/" + id;
+    return this.http.delete<Produto>(url)
   }
 
 }

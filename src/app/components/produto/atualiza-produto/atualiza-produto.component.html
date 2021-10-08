@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-title>
-        Novo Produto
+        Editar Produto
     </mat-card-title>
     <form>
         <mat-form-field>
@@ -12,12 +12,12 @@
              [(ngModel)]="produto.preco" name="preco" type="number">
         </mat-form-field>
     </form>
-
-    <button mat-raised-button (click)="criarProduto()">
-        Salvar
-    </button>
-
-    <button mat-raised-button (click)="cancelar()" color="primary">
+    
+    <button mat-raised-button (click)="cancelar()" color="tomate">
         Cancelar
+    </button> 
+
+    <button mat-raised-button (click)="editarProduto()">
+        Salvar
     </button>
 </mat-card>
