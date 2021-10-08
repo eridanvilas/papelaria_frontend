@@ -2,5 +2,6 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
-    background-color: indigo;
+    margin-left: 90%;
+    background-color: steelblue;
 }

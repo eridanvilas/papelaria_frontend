@@ -13,11 +13,13 @@
         </mat-form-field>
     </form>
 
-    <button mat-raised-button (click)="criarProduto()">
+ 
+    <button mat-raised-button (click)="cancelar()" class="cancelar">
+        Cancelar
+    </button>  
+
+    <button mat-raised-button (click)="criarProduto()" class="salvar">
         Salvar
     </button>
 
-    <button mat-raised-button (click)="cancelar()" color="primary">
-        Cancelar
-    </button>
 </mat-card>

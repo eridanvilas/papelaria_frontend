@@ -3,10 +3,9 @@ form {
     flex-direction: column;
 }
 
-button {
-    margin-top: 20px;
-    margin-right: 15px;
-    background-color: indigo;
+.atualizar {
+   margin-left: 10px;
+    background-color: steelblue;
 }
 
 .cancelar{
