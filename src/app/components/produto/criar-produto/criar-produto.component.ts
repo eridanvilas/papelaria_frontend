@@ -2,6 +2,7 @@ import { Produto } from './../produto.model';
 import { ProdutoService } from './../produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from '../../template/header/header.service';
 
 @Component({
   selector: 'app-criar-produto',
@@ -16,7 +17,13 @@ export class CriarProdutoComponent implements OnInit {
   }
 
   constructor(private produtosService: ProdutoService,
-    private router: Router) { }
+    private router: Router, private headerService : HeaderService) { 
+      headerService.headerData = {
+        title: "Cadastrar Produto",
+        icon: 'storefront',
+        routeUrl: '/produtos'
+      }
+    }
 
   ngOnInit(): void {
   }

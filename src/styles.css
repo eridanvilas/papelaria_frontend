@@ -1,10 +1,31 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .gold {
     color: rgb(192, 177, 90);
 }
 
+.black {
+    color: black;
+}
+
+
 .v-middle {
     vertical-align: middle;
+}
+
+.msg-success {
+    background-color: rgb(228, 255, 205);
+    color: black;
+}
+
+.msg-error {
+    background-color: lightpink;
+    color: black;
 }

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto.model';
 import { DeletarProdutoDialogComponent } from '../deletar-produto-dialog/deletar-produto-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { HeaderService } from '../../template/header/header.service';
 
 @Component({
   selector: 'app-produto-lista',
@@ -15,7 +16,13 @@ export class ProdutoListaComponent implements OnInit {
   produtos!: Produto[];
   displayedColumns = ['id', 'nome', 'preco', 'action']
 
-  constructor(private produtoService: ProdutoService, private dialog: MatDialog, private router : Router) {
+  constructor(private produtoService: ProdutoService,
+    private dialog: MatDialog, private router: Router, private headerService: HeaderService) {
+      headerService.headerData = {
+        title: "Lista de Produtos",
+        icon: 'storefront',
+        routeUrl: '/produtos'
+      }
   }
 
   ngOnInit(): void {
