@@ -1,0 +1,7 @@
+.novoProduto {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-left: 90%;
+    background-color: steelblue;
+}

@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.salvar {
+    margin-left: 10px;
+     background-color: steelblue;
+ }
+ 
+ .cancelar{
+     background-color: tomato;
+ }
